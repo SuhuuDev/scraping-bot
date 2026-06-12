@@ -1,19 +1,19 @@
 # Discord Scraping Bot
 
-Bot Discord yang scrape GitHub, Hacker News, HuggingFace, dan Reddit, terus kategorikan jadi 3 topik:
+A Discord bot that scrapes GitHub, Hacker News, HuggingFace, and Reddit, then categorizes content into 3 topics:
 - **Bansos** (Free API/Tools)
 - **Hot-Take** (Tech News/Drama)
 - **Daily** (Dev Activity)
 
 ## Setup
 
-### 1. Buat `.env`
+### 1. Create `.env`
 ```
-DISCORD_TOKEN=token_bot_lu_disini
+DISCORD_TOKEN=your_bot_token_here
 ```
 
 ### 2. Enable Intents
-Di Discord Developer Portal:
+In Discord Developer Portal:
 - Tab **Bot** → **Privileged Gateway Intents**
 - Enable:
   - **Message Content Intent**
@@ -25,12 +25,12 @@ pip install -r requirements.txt
 ```
 
 ### 4. Setup Channels
-Buat channels ini di Discord server lu:
+Create these channels in your Discord server:
 - `#bansos`
 - `#hot-take`
 - `#daily`
 
-### 5. Invite Bot ke Server
+### 5. Invite Bot to Server
 1. Developer Portal → **OAuth2** → **URL Generator**
 2. Scopes: `bot`
 3. Permissions:
@@ -42,7 +42,7 @@ Buat channels ini di Discord server lu:
 python bot.py
 ```
 
-Bot auto-scrape tiap hari jam 7 pagi WITA. Manual trigger: `!scrape`
+Auto-scrapes daily at 7 AM WITA (UTC+8). Manual trigger: `!scrape`
 
 ## Sources
 | Source | Channel |
